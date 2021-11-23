@@ -3,7 +3,9 @@
 
 const userWord = prompt('Dimmi una parola');
 
-checkWordPalindroma(userWord);
+let polindromo = checkWordPalindroma(userWord);
+
+alert(polindromo);
 
 // Creo un ciclo for per leggere la parola all'incontrario
 function checkWordPalindroma(userWord) {
@@ -16,12 +18,15 @@ function checkWordPalindroma(userWord) {
         
     }
     
+    let ifIsPolindromo;
+
     if ( userWord === reverseWord ) {
-        alert('polindromo');
+        ifIsPolindromo = 'E un polindromo';
     } else {
-        alert('non è un polindromo');
+        ifIsPolindromo = 'Non è un polindromo';
     }
     
+    return ifIsPolindromo;
 }
 // Faccio un confronto alla parola data dall'utente e quella letta all'incontrario
 // output per emmettere il risultato
